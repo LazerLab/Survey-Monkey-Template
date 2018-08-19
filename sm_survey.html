@@ -1,0 +1,28 @@
+<script>        
+    function initialize() {
+      $("#survey_title").html(variables["title"]);
+    }
+    
+    function end(){
+        $("#survey_container").hide();  
+        experimentComplete();
+    }
+
+</script>
+    
+    
+    
+<h1 id="survey_title"></h1>
+
+
+<div id='survey_container'>
+    <script>
+        //REPLACE THIS WITH THE JAVASCRIPT PORTION OF THE INSTALLATION CODE PROVIDED BY SURVEY MONKEY
+        (function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd5ypK0uK2J6UnUdlymdc0D61Ew7KCEJtXTX0uw2iKlBs.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");
+    </script>
+</div>
+
+<!--Button users should push to finish the survey-->
+<div id='button_div' style='text-align:center'>
+    <button type="button" class="btn btn-success" onclick="end()">Close Study</button>
+</div>
